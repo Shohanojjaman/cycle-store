@@ -1,0 +1,316 @@
+/* ========
+Fonts
+=========== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #325662;
+    --secondery: #f7c17b;
+    --text: #1c1c1c;
+    --light: #e0dcdc;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    background-color: var(--white);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+        "header header header header header header header header header header header header"
+        "hero hero hero hero hero hero hero hero hero hero hero hero"
+        "cycle cycle cycle cycle cycle cycle cycle cycle cycle cycle cycle cycle"
+    ;
+}
+
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+h5 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+p {
+    font-size: 17px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background-color: var(--primary);
+    border: none;
+    padding: 15px 40px;
+    margin-top: 40px;
+    color: var(--white);
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.container {
+    width: 1170px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.container-fluid {
+    width: 100%;
+    /* display: flex; */
+}
+
+.col-1 {
+    width: 8.33333333%;
+}
+
+.col-2 {
+    width: 16.66666667%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33333333%;
+}
+
+.col-5 {
+    width: 41.66666667%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33333333%;
+}
+
+.col-8 {
+    width: 66.66666667%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33333333%;
+}
+
+.col-11 {
+    width: 91.66666667%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+/* Header Area */
+header {
+    grid-area: header;
+    height: 80px;
+    padding: 0 50px;
+    display: grid;
+    align-items: center;
+    background-color: transparent;
+    grid-template-areas:
+        "logo nav  nav nav nav nav nav nav nav nav nav hr"
+    ;
+    z-index: 999;
+}
+
+.logo img {
+    width: 100%;
+    grid-area: logo;
+}
+
+nav {
+    grid-area: nav;
+    justify-self: flex-end;
+    align-self: center;
+}
+
+nav.main-menu ul li {
+    display: inline-block;
+    padding-left: 30px;
+}
+
+nav.main-menu ul li a {
+    color: var(--light);
+    font-size: 17px;
+    text-transform: capitalize;
+
+}
+
+.header-right {
+    grid-area: hr;
+    justify-self: flex-end;
+}
+
+.header-right ul li {
+    display: inline-block;
+    padding-left: 30px;
+}
+
+.header-right ul li a {
+    color: var(--light);
+    font-size: 17px;
+    text-transform: capitalize;
+}
+
+/* ===========
+Hero area
+============== */
+section.hero-area {
+    height: 800px;
+    grid-area: hero;
+    margin-top: -80px;
+    background-position: center top;
+    background-size: 1700px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 4;
+}
+
+.hero-content {
+    width: 500px;
+    padding-right: 40px;
+}
+
+.hero-content h1 {
+    color: var(--white);
+    font-weight: 800;
+    line-height: 1;
+    font-family: 'Raleway', sans-serif;
+}
+
+.hero-content p {
+    color: var(--white);
+    font-weight: 400;
+    font-size: 17px;
+    margin-top: 20px;
+}
+
+.hero-content button {
+    background-color: var(--secondery);
+}
+
+/* Main Contant */
+section.cycle {
+    width: 1140px;
+    margin: auto;
+    display: grid;
+    grid-area: cycle;
+    grid-template-rows: 100px;
+    grid-template-areas:
+        "title title title title title title title title title title title title"
+        "cycle-offer cycle-offer cycle-offer cycle-offer cycle-offer cycle-offer cycle-offer cycle-offer cycle-offer cycle-offer cycle-offer cycle-offer"
+    ;
+    row-gap: 100px;
+}
+
+.section-title {
+    grid-area: title;
+}
+
+.section-title h2 {
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.section-title p {
+    text-align: center;
+}
+
+.cycle-offer {
+    display: grid;
+    grid-area: cycle-offer;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.cycle-img img {
+    width: 70%;
+}
+
+.cycle-heading {
+    display: flex;
+    margin-bottom: 80px;
+}
+
+.cycle-heading .divider {
+    align-self: center;
+    width: 50%;
+    margin-right: 50px;
+}
+
+.cycle-heading .divider hr {
+    height: 1px;
+    color: var(--primary);
+    width: 260px;
+}
+
+.cycle-heading h3 {
+    width: 50%;
+    text-align: left;
+    font-size: 50px;
+    text-transform: capitalize;
+    color: var(--text);
+}
+
+.cycle-offer p {
+    margin-bottom: 80px;
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
